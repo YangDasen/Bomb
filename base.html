@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="static/jquery-3.1.1.min.js"></script>
+    <script src="static/main.js"></script>
+    <link rel="stylesheet" href="static/style.css">
+    <title>Bomb-yds</title>
+</head>
+
+<body>
+    <div>
+        <fieldset id="menu">
+            <legend>扫雷设置</legend>
+            <div title="简单难度，网格大小9x9，共10颗雷">
+                <input type="radio" name="setlevel" id="levelEasy"><label for="levelEasy">简单</label>
+            </div>
+            <div title="正常难度，网格大小20x20，共20颗雷">
+                <input type="radio" name="setlevel" id="levelNormal"><label for="levelNormal">正常</label>
+            </div>
+            <div title="困难难度，网格大小99x99，共100颗雷">
+                <input type="radio" name="setlevel" id="levelHard"><label for="levelHard">困难</label>
+            </div>
+            <div title="允许用户自定义网格大小，雷数">
+                <input type="radio" name="setlevel" id="levelSetByUser"><label for="levelSetByUser">自定义</label>
+                <span id="SetBomb">
+                    行数:&nbsp<input type="text" title="行数" style="width:30px">
+                    列数:&nbsp<input type="text" title="列数" style="width:30px">
+                    雷数:&nbsp<input type="text" title="雷数" style="width:30px">
+                </span>
+            </div>
+            </br>
+            <div id="BgnButton">
+                <input type="button" value="点击开始" id="BeginButton">
+            </div>
+
+        </fieldset>
+        <fieldset id="gameField">
+            <legend>
+                <span>简单</span>
+                <span>用时</span><span>秒</span>
+                <span>剩余</span><span>个雷</span>
+                <input type="button" value="返回" id="turnback">
+            </legend>
+            <div id="contentField">
+                <div id="content">
+                </div>
+                <div id="progress">
+                </div>   
+            </div>
+        </fieldset>
+        
+
+
+    </div>    
+
+
+
+
+
+
+
+</body>
+</html>

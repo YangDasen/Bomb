@@ -1,0 +1,70 @@
+
+#BeginButton{
+  width:216px;
+	height:40px;
+	background:url("/home/yds/Bomb-yds/static/img/bg40.jpg") repeat-x left top;
+	padding-bottom:2px;
+	color:#FFF;
+  border: 0px;
+	
+}
+#BgnButton{
+	text-align:center; margin:0 auto;
+}
+
+#contentField{
+width: 180px;
+height: 200px;
+
+}
+
+
+.divCol{
+float:left;
+border: 1px solid black;
+margin: -1px 0 0 -1px;
+width:19px;
+height: 20px;
+line-height: 20px;
+background-image: url("/home/yds/Bomb-yds/static/img/back.png");
+}
+
+
+.divColBomb{
+float:left;
+border: 1px solid black;
+margin: -1px 0 0 -1px;
+width:19px;
+height: 20px;
+line-height: 20px;
+background-image: url("/home/yds/Bomb-yds/static/img/back.png");
+}
+
+
+divRow{
+	height: 31px;
+}
+
+.divColMouse {
+    background-image: url("/home/yds/Bomb-yds/static/img/back2.png");
+    background-color: #cccffa; /*cccfff*/
+}
+
+.divColMouseBumb{
+
+background-image: url("/home/yds/Bomb-yds/static/img/bomb.png");
+background-color: #cccffa !important; /*cccfff*/
+width: 19px;
+height: 20px;
+
+}
+
+.divClear{
+
+/*background-image: url("/home/yds/Bomb-yds/static/img/mark1.png");*/
+/*background-color: #cccffa;  cccfff*/
+background: white;
+width: 19px;
+height: 20px;
+
+}
