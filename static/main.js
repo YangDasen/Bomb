@@ -13,10 +13,12 @@ var arrId;
 var temp = "";//中间变量，临时存储循环时用来存储数组中的某个元素
 var arrAllDivId;
 var randomId;
+var arrGetArroundId;
 
 
 arrBomb = new Array();
 arrId = new Array();
+arrGetArroundId = new Array();
 
 
 
@@ -46,6 +48,7 @@ $(document).ready(function(){
         createDiv();
         mouse();         
         getArroundId();
+        getClickArround();
         
     })
 //返回
@@ -118,10 +121,6 @@ function getArroundId() {
         console.log(numIdarry);
         repeatBombId();            
 }
-
-
-
-
 
 //根据生成的坐标产生div
 function createDiv(){
@@ -218,10 +217,42 @@ function mouse(){
             if($.inArray(this.id,pub_repeadBomId) >= 0 )
                 for(x=1; x<pub_repeadBomId.length;x++){
                     if(this.id == arrMap[x]){
-                         $(this).html(arrcountNum[x]);   
+                         $(this).html(arrcountNum[x]); 
+                         $(this).addClass("class=\"divColBombNum\""); 
                          }
                 }
                 
             });
 
+ }
+ 
+ //点击鼠标开雷
+ //获取鼠标点击处周围的8个坐标
+ function getClickArround() {
+     
+         $(".divCol").mousedown(function(e){
+             if(e.button === 1){
+
+ 
+        var i = parseInt(this.id.split("_")[0]);
+        var j = parseInt(this.id.split("_")[1]);
+        
+        
+            var id_1 = (i-1).toString()+"_"+(j-1).toString(); 
+            var id_2 = (i-1).toString()+"_"+(j).toString();
+            var id_3 = (i-1).toString()+"_"+(j+1).toString();
+            var id_4 = (i).toString()+"_"+(j-1).toString();
+            var id_5 = (i).toString()+"_"+(j+1).toString();
+            var id_6 = (i+1).toString()+"_"+(j-1).toString();
+            var id_7 = (i+1).toString()+"_"+(j).toString();
+            var id_8 = (i+1).toString()+"_"+(j+1).toString();
+        
+        arrGetArroundId.push(id_1,id_2,id_3,id_4,id_5,id_6,id_7,id_8);
+        console.log(arrGetArroundId);
+
+
+             }
+    
+
+    })
  }
