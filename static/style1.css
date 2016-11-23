@@ -1,0 +1,26 @@
+table{
+     border: 1px solid red;
+     border-collapse:collapse;
+     text-align: center;
+}
+
+td{ 
+    border: 1px solid red;
+    height: 30px;
+    width: 30px;
+    /*background-color: gray;*/
+}
+
+tr{ 
+    border: 1px solid red;
+}
+
+.move{
+    background-color: green;
+}
+
+.DefaultTable{
+text:hidden;
+background-color: black;
+/*background-image: url("/home/yds/Bomb-yds/static/img/back.png");*/
+}
